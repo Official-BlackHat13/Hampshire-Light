@@ -1,0 +1,63 @@
+@mixin htag($h: 6, $size: 2, $lh: 2.8) {
+  #{"h"}#{$h} {
+    font-size: #{$size * 10}#{"px"};
+    margin: 0;
+    padding: 0;
+    line-height: #{$lh * 10}#{"px"};
+    font-weight: bold;
+  }
+}
+@mixin colname($name: b, $col: $b) {
+  #{".col--"}#{$name} {
+    color: #{$col};
+  }
+}
+@mixin flex($align: center, $justify: flex-start, $dis: flex) {
+  display: $dis;
+  align-items: $align;
+  justify-content: $justify;
+}
+@mixin objectfit($size: cover, $pos: center center) {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: $size;
+  object-position: $pos;
+}
+@mixin place($place: center, $text: center, $justify: center) {
+  place-items: $place;
+  text-align: $text;
+  justify-content: $justify;
+}
+@mixin scrollbar($sz: 10px, $mb: 10px, $cl: $yellow, $bg: #dcdcdc) {
+  scrollbar-width: thin;
+  scrollbar-color: $dimText $bg;
+  &::-webkit-scrollbar {
+    width: $sz;
+    height: $sz;
+  }
+  &::-webkit-scrollbar-track {
+    background: $bg;
+    border-radius: 50px;
+    margin-block: $mb;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $cl;
+    border-radius: 50px;
+  }
+}
+@mixin marnon($margin: 0 0 0 0) {
+  margin: $margin;
+  &:last-child {
+    margin: 0;
+  }
+}
+@mixin addBtn($bg: #000, $tcl: #000, $h_bg: $w, $h_tcl: $b) {
+  background: $bg;
+  color: $tcl;
+  border-color: $bg;
+  &:hover {
+    background: $h_bg;
+    border-color: $h_bg;
+    color: $h_tcl;
+  }
+}

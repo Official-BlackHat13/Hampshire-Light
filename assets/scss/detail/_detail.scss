@@ -1,0 +1,126 @@
+.detail-- {
+  &section {
+    padding: 150px 0 170px;
+    position: relative;
+    z-index: 10;
+    @media screen and (max-width: 1800px) {
+      padding: 110px 0 130px;
+    }
+    @media screen and (max-width: 1280px) {
+      padding: 90px 0 110px;
+    }
+    @media screen and (max-width: 992px) {
+      padding: 70px 0;
+    }
+    @media screen and (max-width: 576px) {
+      padding: 50px 0;
+    }
+  }
+  &box {
+    @include flex(center, center);
+    flex-direction: column;
+    .section--title {
+      margin: 50px 0 0 0;
+      text-align: center;
+      @media screen and (max-width: 1800px) {
+        margin: 40px 0 0 0;
+      }
+      @media screen and (max-width: 1280px) {
+        margin: 30px 0 0 0;
+      }
+      @media screen and (max-width: 992px) {
+        margin: 20px 0 0 0;
+      }
+      @media screen and (max-width: 576px) {
+        margin: 15px 0 0 0;
+      }
+      p {
+        display: block;
+        text-align: center;
+        font-size: 28px;
+        line-height: 35px;
+        margin: 32px 0 0 0;
+        color: #707070;
+        @media screen and (max-width: 1800px) {
+          font-size: 22px;
+          line-height: 29px;
+          margin: 20px 0 0 0;
+        }
+        @media screen and (max-width: 1280px) {
+          font-size: 20px;
+          line-height: 27px;
+          margin: 15px 0 0 0;
+        }
+        @media screen and (max-width: 992px) {
+          font-size: 18px;
+          line-height: 25px;
+          margin: 12px 0 0 0;
+        }
+        @media screen and (max-width: 768px) {
+          font-size: 14px;
+          line-height: 20px;
+          margin: 10px 0 0 0;
+        }
+      }
+    }
+    .btn--holder {
+      margin: 45px 0 0 0;
+      .btn {
+        width: 350px;
+      }
+      @media screen and (max-width: 1800px) {
+        margin: 30px 0 0 0;
+        .btn {
+          width: 300px;
+        }
+      }
+      @media screen and (max-width: 992px) {
+        margin: 20px 0 0 0;
+        .btn {
+          width: auto;
+          padding: 0 70px;
+        }
+      }
+      @media screen and (max-width: 576px) {
+        margin: 15px 0 0 0;
+        .btn {
+          padding: 0 50px;
+        }
+      }
+    }
+  }
+  &icon {
+    width: 62px;
+    height: auto;
+    margin: auto;
+    @media screen and (max-width: 1800px) {
+      width: 50px;
+    }
+    @media screen and (max-width: 1280px) {
+      width: 42px;
+    }
+    @media screen and (max-width: 992px) {
+      width: 36px;
+    }
+    @media screen and (max-width: 576px) {
+      width: 30px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &watermark {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0.1));
+    img,
+    figure {
+      height: 100%;
+      width: auto;
+    }
+  }
+}

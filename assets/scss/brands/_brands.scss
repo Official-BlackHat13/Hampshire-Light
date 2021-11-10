@@ -1,0 +1,69 @@
+.brands-- {
+  &box {
+    overflow: hidden;
+    display: flex;
+    border-top: 2px solid #ddd;
+    padding: 90px 0;
+    flex-direction: row;
+    align-items: center;
+    @media screen and (max-width: 1800px) {
+      padding: 70px 0;
+    }
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 60px 0;
+    }
+    @media screen and (max-width: 992px) {
+      padding: 50px 0;
+    }
+  }
+  &text {
+    margin: 0 65px 0 0;
+    min-width: 290px;
+    @media screen and (max-width: 1800px) {
+      margin: 0 40px 0 0;
+      min-width: 190px;
+    }
+    * {
+      font-size: 26px;
+      line-height: 28px;
+      font-weight: bold;
+      @media screen and (max-width: 1800px) {
+        font-size: 20px;
+        line-height: 22px;
+      }
+    }
+  }
+  &item {
+    a {
+      max-width: 215px;
+      height: 75px;
+      @include flex(center, center);
+      @media screen and (max-width: 1920px) {
+        max-width: 165px;
+        height: 60px;
+      }
+      @media screen and (max-width: 1440px) {
+        max-width: 140px;
+        height: 50px;
+      }
+      @media screen and (max-width: 1080px) {
+        max-width: 130px;
+        height: 45px;
+      }
+      @media screen and (max-width: 768px) {
+        max-width: 120px;
+        height: 40px;
+      }
+      img {
+        @include objectfit(contain);
+      }
+    }
+  }
+  &sliderbox {
+    @media screen and (max-width: 1024px) {
+      margin: 20px 0 0 0;
+    }
+  }
+}

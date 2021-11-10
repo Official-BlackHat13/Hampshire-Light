@@ -1,0 +1,140 @@
+.service-- {
+  &section {
+    padding: 90px 0;
+    max-width: 100%;
+    min-width: 100%;
+    overflow: hidden;
+    @media screen and (max-width: 1800px) {
+      padding: 70px 0;
+    }
+    @media screen and (max-width: 992px) {
+      padding: 50px 0;
+    }
+  }
+  &box {
+    display: flex;
+    flex-direction: row;
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+    }
+  }
+  &detailbox {
+    min-width: 470px;
+    width: 470px;
+    margin: 0 85px 0 0;
+    @media screen and (max-width: 1800px) {
+      min-width: 420px;
+      width: 420px;
+      margin: 0 50px 0 0;
+    }
+    @media screen and (max-width: 992px) {
+      width: 100%;
+    }
+  }
+  &list {
+    display: block;
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: bold;
+    padding: 0 0 0 30px;
+    position: relative;
+    z-index: 1;
+    color: $b;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: auto;
+      height: auto;
+      transform: translateY(-50%);
+      left: 0;
+      border: 8px solid transparent;
+      border-left: 10px solid $b;
+    }
+    @media screen and (max-width: 1800px) {
+      font-size: 22px;
+      line-height: 26px;
+      padding: 0 0 0 22px;
+      &::before {
+        border-width: 5px;
+        border-left-width: 8px;
+      }
+    }
+  }
+  &databox {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    @media screen and (max-width: 992px) {
+      margin: 30px 0 0;
+    }
+  }
+  &img {
+    // max-width: 530px;
+    height: 690px;
+    // width: 100%;
+    background: $yellow;
+    display: block;
+    @media screen and (max-width: 1800px) {
+      // max-width: 380px;
+      height: 490px;
+    }
+    @media screen and (max-width: 1080px) {
+      // max-width: 320px;
+      height: 420px;
+    }
+    @media screen and (max-width: 992px) {
+      // max-width: 280px;
+      height: 380px;
+    }
+    img,
+    figure {
+      @include objectfit;
+    }
+  }
+  &slider.owl-carousel.owl-theme {
+    .owl-dot {
+      @include marnon(0 0 32px 0);
+      &.active .service--list {
+        color: $yellow;
+        &::before {
+          border-left-color: $yellow;
+        }
+      }
+      @media screen and (max-width: 1800px) {
+        @include marnon(0 0 22px 0);
+      }
+      &s {
+        flex-direction: column;
+        margin: 45px 0 0 0;
+        align-items: flex-start;
+        min-width: 555px;
+        width: 555px;
+        position: absolute;
+        right: 100%;
+        bottom: 50px;
+        @media screen and (max-width: 1800px) {
+          bottom: 30px;
+          min-width: 470px;
+          margin: 30px 0 0 0;
+          width: 470px;
+        }
+        @media screen and (max-width: 992px) {
+          width: 100%;
+        }
+      }
+    }
+    .owl-item {
+      &.active.center {
+        .service--img {
+          // outline: 3px solid $yellow;
+          padding: 3px;
+        }
+      }
+    }
+    .owl-stage {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
